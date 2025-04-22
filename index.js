@@ -23,7 +23,7 @@ const onlineUsers = new Map(); // userId => socket.id
 
 // CORS configuration (update with actual frontend URLs if needed)
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:8081'],
+  origin: ['https://healernest-healers.web.app', 'https://healernest-health.web.app', 'https://healernest-healers.firebaseapp.com/', 'https://healernest-health.firebaseapp.com/'],
   methods: ['GET', 'POST'],
   credentials: true,
 }));
@@ -31,7 +31,7 @@ app.use(cors({
 // Initialize Socket.IO
 const io = socketIO(server, {
   cors: {
-    origin: ['http://localhost:8080', 'http://localhost:8081'],
+    origin: ['https://healernest-healers.web.app', 'https://healernest-health.web.app', 'https://healernest-healers.firebaseapp.com/', 'https://healernest-health.firebaseapp.com/'],
     methods: ['GET', 'POST'],
   }
 });
